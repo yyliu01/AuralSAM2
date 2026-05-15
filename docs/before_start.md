@@ -42,10 +42,15 @@ We also release our checkpoints on Hugging Face: [yyliu01/AuralSAM2](https://hug
 
 ```python
 from huggingface_hub import hf_hub_download
-
 ckpt_path = hf_hub_download(
     repo_id="yyliu01/AuralSAM2",
-    filename="ckpts/avs/v1m/0.75336.pth",
+    filename="ckpts/auralsam2_avs_v1m.pth",
 )
+'''
+Available Checkpoints:
+- `ckpts/auralsam2_avs_v1m.pth`
+- `ckpts/auralsam2_avs_v1s.pth`
+- `ckpts/auralsam2_avs_v2.pth`
+- `ckpts/auralsam2_refavs_best.pth`
+'''
 ```
-
