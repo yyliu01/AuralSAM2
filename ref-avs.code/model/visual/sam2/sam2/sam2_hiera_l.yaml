@@ -1,0 +1,3 @@
+# @package _global_
+defaults:
+  - /configs/sam2/sam2_hiera_l

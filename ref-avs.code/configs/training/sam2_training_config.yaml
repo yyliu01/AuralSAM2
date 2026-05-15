@@ -1,0 +1,60 @@
+# @package _global_
+
+# Video transforms
+train_transforms:
+  - _target_: dataloader.sam2_dataset.transforms.ComposeAPI
+    transforms:
+      - _target_: dataloader.sam2_dataset.transforms.RandomHorizontalFlip
+        consistent_transform: True
+      - _target_: dataloader.sam2_dataset.transforms.RandomAffine
+        degrees: 25
+        shear: 20
+        image_interpolation: bilinear
+        consistent_transform: True
+      - _target_: dataloader.sam2_dataset.transforms.RandomResizeAPI
+        sizes: 1024
+        square: true
+        consistent_transform: True
+      - _target_: dataloader.sam2_dataset.transforms.ColorJitter
+        consistent_transform: True
+        brightness: 0.1
+        contrast: 0.03
+        saturation: 0.03
+        hue: null
+      - _target_: dataloader.sam2_dataset.transforms.RandomGrayscale
+        p: 0.05
+        consistent_transform: True
+      - _target_: dataloader.sam2_dataset.transforms.ColorJitter
+        consistent_transform: False
+        brightness: 0.1
+        contrast: 0.05
+        saturation: 0.05
+        hue: null
+      - _target_: dataloader.sam2_dataset.transforms.ToTensorAPI
+      - _target_: dataloader.sam2_dataset.transforms.NormalizeAPI
+        mean: [0.485, 0.456, 0.406]
+        std: [0.229, 0.224, 0.225]
+
+loss:
+  all:
+    _target_: loss.training.sam2_training_loss.MultiStepMultiMasksAndIous
+    weight_dict:
+      loss_mask: 20
+      loss_dice: 1
+      loss_iou: 1
+      loss_class: 1
+    supervise_all_iou: true
+    iou_use_l1_loss: true
+    pred_obj_scores: true
+    focal_gamma_obj_score: 0.0
+    focal_alpha_obj_score: -1.0
+    gpu_num: 4.
+
+contrastive_learning:
+  temperature: 0.10
+  ignore_idx: 255
+  ood_idx: 254
+  max_views: 512
+  proj_dim: 512
+  sample_limits: 64
+  total_limits: 15240

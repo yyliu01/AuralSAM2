@@ -1,0 +1,30 @@
+# @package _global_
+
+aural_fuser:
+  patch_cfgs:
+    - [4, 4]
+    - [2, 2]
+    - [1, 1]
+  f_depths: [3, 6, 12]
+  block_kw:
+    dim: 256
+    num_heads: 4
+    mlp_ratio: 4
+    qkv_bias: true
+    qk_scale: null
+    drop: 0.1
+    attn_drop: 0.1
+    drop_path: 0.0
+    sr_ratio: 4
+    linear: false
+  one_d_kw:
+    dim: 256
+    num_heads: 4
+    mlp_ratio: 4
+    qkv_bias: true
+    qk_scale: null
+    drop: 0.1
+    attn_drop: 0.1
+    drop_path: 0.0
+    sr_ratio: 4
+    linear: false
