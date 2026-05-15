@@ -4,7 +4,7 @@ Through Pyramid Audio-Visual Feature Prompting](#)
 >
 > by Yuyuan Liu, Yuanhong Chen, Chong Wang, Junlin Han, Junde Wu, Can Peng, Jingkun Chen, Yu Tian and Gustavo Carneiro
 >
-<img src="./docs/overview.png" width="850" height="300" />
+<img src="./docs/overview.png" width="850" alt="AuralSAM2 overview" />
 
 ## Installation
 please install the dependencies and dataset based on this [***installation***](./docs/installation.md) document.
