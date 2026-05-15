@@ -1,0 +1,4 @@
+# Incremental updates only (newly installed in this session)
+transformers==5.6.2
+audiomentations==0.39.0
+wandb==0.26.1
