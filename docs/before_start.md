@@ -38,4 +38,14 @@ In details, after clicking the run (e.g., [v1m-hiera-l](https://wandb.ai/pyedog1
 ## 💾 Checkpoints
 We release both checkpoints and training logs in this [Google Drive link](https://drive.google.com/drive/folders/1n0HaCHMn48KaImXvX2mu4qKHUQg4mo9R?usp=sharing).
 
+We also release our checkpoints on Hugging Face: [yyliu01/AuralSAM2](https://huggingface.co/yyliu01/AuralSAM2/tree/main). You can download a weight file directly from the repo **Files** tab, or programmatically with [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub), for example:
+
+```python
+from huggingface_hub import hf_hub_download
+
+ckpt_path = hf_hub_download(
+    repo_id="yyliu01/AuralSAM2",
+    filename="ckpts/avs/v1m/0.75336.pth",
+)
+```
 
