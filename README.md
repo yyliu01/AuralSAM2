@@ -1,3 +1,5 @@
+
+
 # AuralSAM2
 > **[CVPRF'26]** [AuralSAM2: Enabling SAM2 Hear
 Through Pyramid Audio-Visual Feature Prompting](#)
@@ -7,13 +9,13 @@ Through Pyramid Audio-Visual Feature Prompting](#)
 <img src="./docs/overview.png" width="850" alt="AuralSAM2 overview" />
 
 ## Installation
-please install the dependencies and dataset based on this [***installation***](./docs/installation.md) document.
+Please install the dependencies and dataset based on this [***installation***](./docs/installation.md) document.
 
 ## Getting start
-please follow this [***instruction***](./docs/before_start.md) document to reproduce our results.
+Please follow this [***instruction***](./docs/before_start.md) document to reproduce our results.
 
 ## Citation
-please consider citing our work in your publications if it helps your research.
+Please consider citing our work in your publications if it helps your research.
 
 ```bibtex
 @article{liu2025auralsam2,
@@ -23,4 +25,3 @@ please consider citing our work in your publications if it helps your research.
   year={2025}
 }
 ```
-
